@@ -4,14 +4,12 @@
 // if clicked was already true, you lose and reset game
 // else ++ score and re-render the cards (make new state)
 
-
 import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Navbar from "./components/Navbar"
 import friends from "./friends.json";
-
 
 //totally found this on the internet, too complicated for me to figure out how to shuffle
 function shuffleArray(array) {
@@ -24,64 +22,51 @@ function shuffleArray(array) {
   }
   return array;
 }
-const startingFriends = friends
 
-console.log(startingFriends)
-const initialState = {
-  friends,
-  score: 0
-};
 var bestScore
-
 class App extends Component {
-  // Setting this.state.friends to the friends json array
-
   state = {
     friends,
     score: 0,
     maxScore: 0
   };
 
+  clickedIt = id => {
 
-
-  removeFriend = id => {
-
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    // const friends = this.state.friends.filter(friend => friend.id !== id);
-    let friendArray = this.state.friends
-    console.log(friendArray)
-    // console.log(copiedFriends.filter(friend => friend.id === id))
+    let friendArray = friends
     let friendClicked = friendArray.filter(friend => friend.id === id)
-    console.log(friendClicked)
     let friendClickedId = friendClicked[0].id
     let chosenId
     for (var i = 0; i < friendArray.length; i++) {
-      console.log("works")
       if (friendClickedId === friendArray[i].id) {
-        chosenId = i;
-        friendArray[i].alreadyClicked = true;
+        chosenId = i
       }
     }
-    console.log(this.state.friends[chosenId])
-    if (friendArray[chosenId].alreadyClicked) {
 
-      console.log(this.state.friends)
+    if (friends[chosenId].alreadyClicked) {
       alert("You Lose!")
+      for (var i = 0; i < friends.length; i++) {
+        friends[i].alreadyClicked = false
+      }
       this.setState({
         friends,
         score: 0
-      }) //need to reset alreadyClicked somehow
+      })
     }
     else {
       console.log(this.state.score)
-      
+
       if (this.state.score >= this.state.maxScore) {
         bestScore = this.state.score + 1
+        if (bestScore === 12) {
+          alert("You win!")
+          // doesn't reset score here, wasn't working so i left out. have to refresh. (homework example also doesn't reset)
+        }
         console.log(bestScore)
       }
-      // Set this.state.friends equal to the new friends array
+
       this.setState({
-        friends: friendArray,
+        friends: friends[chosenId].alreadyClicked = true,
         score: this.state.score + 1,
         maxScore: bestScore
       });
@@ -90,23 +75,19 @@ class App extends Component {
 
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
   render() {
     let shuffledImages = shuffleArray(friends);
     return (
       <Wrapper>
         <Navbar>Score: {this.state.score} Max Score: {this.state.maxScore}</Navbar>
-        <Title>Clicky Game!
-Click on an image to earn points, but don't click on any more than once!</Title>
+        <Title>Clicky Game! Click on an image to earn points, but don't click on any more than once!</Title>
         {shuffledImages.map(friend => (
           <FriendCard
-            removeFriend={this.removeFriend}
+            clickedIt={this.clickedIt}
             id={friend.id}
             key={friend.id}
             name={friend.name}
             image={friend.image}
-          // occupation={friend.occupation}
-          // location={friend.location}
           />
         ))}
       </Wrapper>
