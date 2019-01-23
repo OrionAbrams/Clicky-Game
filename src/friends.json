@@ -1,73 +1,73 @@
 [
   {
     "id": 1,
-    "name": "SpongeBob",
+    "name": "Bart",
     "image": "/images/bart.jpg",
     "alreadyClicked": false
   },
   {
     "id": 2,
-    "name": "Mr. Krabs",
+    "name": "Mr. Burns",
     "image": "/images/burns.jpg",
     "alreadyClicked": false
   },
   {
     "id": 3,
-    "name": "Squidward",
+    "name": "Grampa",
     "image": "/images/grampa.jpg",
     "alreadyClicked": false
   },
   {
     "id": 4,
-    "name": "Dexter",
+    "name": "Hutz",
     "image": "/images/hutz.jpg",
     "alreadyClicked": false
   },
   {
     "id": 5,
-    "name": "Courage",
+    "name": "Kirk",
     "image": "/images/kirk.jpg",
     "alreadyClicked": false
   },
   {
     "id": 6,
-    "name": "Doug Funnie",
+    "name": "Krusty",
     "image": "/images/krusty.jpg",
     "alreadyClicked": false
   },
   {
     "id": 7,
-    "name": "Bugs Bunny",
+    "name": "Marge",
     "image": "/images/marge.jpg",
     "alreadyClicked": false
   },
   {
     "id": 8,
-    "name": "Johnny Bravo",
+    "name": "Milhouse",
     "image": "/images/milhouse.jpg",
     "alreadyClicked": false
   },
   {
     "id": 9,
-    "name": "Tommy Pickles",
+    "name": "Moleman",
     "image": "/images/moleman.jpg",
     "alreadyClicked": false
   },
   {
     "id": 10,
-    "name": "Rocko",
+    "name": "Ralph",
     "image": "/images/ralph.jpg",
     "alreadyClicked": false
   },
   {
     "id": 11,
-    "name": "Captain Planet",
+    "name": "Sideshow Bob",
     "image": "/images/sideshowbob.jpg",
     "alreadyClicked": false
   },
   {
     "id": 12,
-    "name": "Ickis",
+    "name": "Chief Wiggum",
     "image": "/images/wiggum.jpg",
     "alreadyClicked": false
   }
