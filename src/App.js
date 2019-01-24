@@ -78,19 +78,22 @@ class App extends Component {
   render() {
     let shuffledImages = shuffleArray(friends);
     return (
-      <Wrapper>
+      <div>
         <Navbar>Score: {this.state.score} Max Score: {this.state.maxScore}</Navbar>
-        <Title>Clicky Game! Click on an image to earn points, but don't click on any more than once!</Title>
-        {shuffledImages.map(friend => (
-          <FriendCard
-            clickedIt={this.clickedIt}
-            id={friend.id}
-            key={friend.id}
-            name={friend.name}
-            image={friend.image}
-          />
-        ))}
-      </Wrapper>
+        <Wrapper>
+
+          <Title>Click on an image to earn points, but don't click on any more than once!</Title>
+          {shuffledImages.map(friend => (
+            <FriendCard
+              clickedIt={this.clickedIt}
+              id={friend.id}
+              key={friend.id}
+              name={friend.name}
+              image={friend.image}
+            />
+          ))}
+        </Wrapper>
+      </div>
     );
   }
 }

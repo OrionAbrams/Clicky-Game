@@ -1,8 +1,17 @@
 import React from "react";
-import "./style.css";
+// import "./style.css";
 
 function Navbar(props) {
-  return <nav class="navbar navbar-expand-lg navbar-light bg-light">{props.children}</nav>;
+  return (
+    <nav className="navbar navbar-fixed-top navbar-dark bg-dark">
+    <a className="navbar-brand" href="#">
+    Clicky Game! <br></br>
+      {props.children}
+    </a>
+  </nav>
+);
 }
+
+
 
 export default Navbar;
