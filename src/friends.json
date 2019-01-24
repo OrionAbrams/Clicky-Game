@@ -2,73 +2,73 @@
   {
     "id": 1,
     "name": "Bart",
-    "image": "/assets/images/bart.jpg",
+    "image": "./assets/images/bart.jpg",
     "alreadyClicked": false
   },
   {
     "id": 2,
     "name": "Mr. Burns",
-    "image": "/assets/images/burns.jpg",
+    "image": "./assets/images/burns.jpg",
     "alreadyClicked": false
   },
   {
     "id": 3,
     "name": "Grampa",
-    "image": "/assets/images/grampa.jpg",
+    "image": "./assets/images/grampa.jpg",
     "alreadyClicked": false
   },
   {
     "id": 4,
     "name": "Hutz",
-    "image": "/assets/images/hutz.jpg",
+    "image": "./assets/images/hutz.jpg",
     "alreadyClicked": false
   },
   {
     "id": 5,
     "name": "Kirk",
-    "image": "/assets/images/kirk.jpg",
+    "image": "./assets/images/kirk.jpg",
     "alreadyClicked": false
   },
   {
     "id": 6,
     "name": "Krusty",
-    "image": "/assets/images/krusty.jpg",
+    "image": "./assets/images/krusty.jpg",
     "alreadyClicked": false
   },
   {
     "id": 7,
     "name": "Marge",
-    "image": "/assets/images/marge.jpg",
+    "image": "./assets/images/marge.jpg",
     "alreadyClicked": false
   },
   {
     "id": 8,
     "name": "Milhouse",
-    "image": "/assets/images/milhouse.jpg",
+    "image": "./assets/images/milhouse.jpg",
     "alreadyClicked": false
   },
   {
     "id": 9,
     "name": "Moleman",
-    "image": "/assets/images/moleman.jpg",
+    "image": "./assets/images/moleman.jpg",
     "alreadyClicked": false
   },
   {
     "id": 10,
     "name": "Ralph",
-    "image": "/assets/images/ralph.jpg",
+    "image": "./assets/images/ralph.jpg",
     "alreadyClicked": false
   },
   {
     "id": 11,
     "name": "Sideshow Bob",
-    "image": "/assets/images/sideshowbob.jpg",
+    "image": "./assets/images/sideshowbob.jpg",
     "alreadyClicked": false
   },
   {
     "id": 12,
     "name": "Chief Wiggum",
-    "image": "/assets/images/wiggum.jpg",
+    "image": "./assets/images/wiggum.jpg",
     "alreadyClicked": false
   }
 ]
